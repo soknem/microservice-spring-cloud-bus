@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+
+      enabled: true
+      server:
+        git:
+          uri: https://github.com/soknem/config-server
+          clone-on-start: true
+          search-paths: '{application}'
+#            - config-repo
+    bus:
+      enabled: true
+
+
+  kafka:
+    bootstrap-servers:
+      - http://68.183.225.48:9092
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+server:
+  port: 8888

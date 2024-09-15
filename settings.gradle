@@ -1,0 +1,4 @@
+rootProject.name = 'main-service'
+include('user-service')
+include('product-service')
+include('config-server')

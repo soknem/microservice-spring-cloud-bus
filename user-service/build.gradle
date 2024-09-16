@@ -25,6 +25,7 @@ dependencies {
 
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.cloud:spring-cloud-starter-config'
+
 	implementation 'org.springframework.cloud:spring-cloud-starter-bus-kafka'
 
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
@@ -32,6 +33,9 @@ dependencies {
 	implementation 'org.springframework.cloud:spring-cloud-starter-stream-kafka'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
 
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'

@@ -1,15 +1,17 @@
 
 server:
   port: 8080
-  address: 0.0.0.0
 spring:
+
+  profiles:
+    active: default
   application:
     name: user-service
   config:
-    import: optional:configserver:http://localhost:8888
+    import: configserver:http://68.183.225.48:8888
   cloud:
     config:
-      uri: http://localhost:8888
+      uri: http://68.183.225.48:8888
     stream:
       kafka:
         binder:
@@ -28,8 +30,9 @@ management:
     web:
       exposure:
         include: "*"
+
   endpoint:
     health:
       show-details: always
-
-
+#    refresh:
+#      enabled: false

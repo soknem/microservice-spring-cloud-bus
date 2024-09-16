@@ -1,12 +1,8 @@
-
-server:
-  port: 8080
 spring:
-
   profiles:
     active: default
   application:
-    name: user-service
+    name: product-service
   config:
     import: configserver:http://68.183.225.48:8888
   cloud:
